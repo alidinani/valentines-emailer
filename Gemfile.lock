@@ -17,8 +17,12 @@ GEM
     arel (6.0.0)
     builder (3.2.2)
     coderay (1.1.0)
+    excon (0.44.2)
     i18n (0.7.0)
     json (1.8.2)
+    mandrill-api (1.0.53)
+      excon (>= 0.16.0, < 1.0)
+      json (>= 1.7.7, < 2.0)
     method_source (0.8.2)
     minitest (5.5.1)
     pry (0.10.1)
@@ -44,6 +48,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  mandrill-api
   pry
   rake
   sinatra
