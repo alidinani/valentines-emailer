@@ -2,7 +2,7 @@ require 'mandrill'
 
 class Mailer
   def self.send_warning
-    number_left = 5
+    number_left = Email.future.count
     message = <<-eos
 Hi Ali,
 

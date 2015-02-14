@@ -3,7 +3,7 @@ class CreateEmails < ActiveRecord::Migration
     create_table :emails do |t|
       t.string :subject
       t.text :email
-      t.datetime :send_at
+      t.date :send_at
       t.timestamps
     end
   end
