@@ -18,7 +18,12 @@ class Engine
 
   def self.warning_send!
     print 'Warning needed? '
-    puts 'Yes :('
-    Mailer.send_warning
+    queued = Email.future.count
+    if queued < 5
+      puts 'Yes :('
+      Mailer.send_warning
+    else
+      puts 'Nope!'
+    end
   end
 end
