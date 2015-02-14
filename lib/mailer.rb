@@ -18,6 +18,14 @@ Your Valentine Buddy ;)
     deliver_email('alidinani@gmail.com', 'Get your shit together.', message)
   end
 
+  def self.deliver_actual(email)
+    puts '----'
+    puts "Subject: #{email.subject}"
+    puts email.email
+    puts '----'
+    deliver_email('arub.uppal@gmail.com', email.subject, email.email)
+  end
+
   def self.deliver_email(to, subject, text)
     m = Mandrill::API.new 'oVDACt4VxI_4fLJK7tk4Kg'
     message = {

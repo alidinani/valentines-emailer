@@ -13,7 +13,12 @@ class Engine
 
   def self.send_email!
     print 'Sending email... '
-    puts 'Sent.'
+    if email = Email.today.first
+      Mailer.deliver_actual(email)
+      puts 'Sent.'
+    else
+      puts 'THERE IS NONE =/'
+    end
   end
 
   def self.warning_send!
